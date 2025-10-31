@@ -17,9 +17,7 @@ const Header: React.FC = () => {
           <li><a href="#about">About</a></li>
         </ul>
       </nav>
-      <button className="lang-toggle" onClick={toggleLanguage}>EN | हिंदी</button>
-      <button className="cta-button">Get Started</button>
-    </header>
+      </header>
   );
 };
 

@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Features from './components/Features';
+import ResumeUpload from './components/ResumeUpload';
+import Footer from './components/Footer';
+import OnboardingModal from './components/OnboardingModal';
+import ProfileSetup from './components/ProfileSetup';
+import './styles/App.css';
 
-function App() {
+const App: React.FC = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Hero />
+      <Features />
+      <ResumeUpload />
+      {showProfile ? (
+        <ProfileSetup onComplete={() => setShowProfile(false)} />
+      ) : showModal ? (
+        <OnboardingModal onClose={() => setShowModal(false)} onSuccess={() => setShowProfile(true)} />
+      ) : (
+        <button className="cta-button fixed-cta" onClick={() => setShowModal(true)}>Get Started</button>
+      )}
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

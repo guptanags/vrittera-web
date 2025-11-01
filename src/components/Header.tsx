@@ -21,9 +21,7 @@ const Header: React.FC<HeaderProps> = ({ page, setPage }) => {
           <li><a href="#" className={page === 'about' ? 'active' : ''} onClick={() => setPage('about')}>About</a></li>
         </ul>
       </nav>
-      <button className="lang-toggle" onClick={toggleLanguage}>EN | हिंदी</button>
-      <button className="cta-button" onClick={() => setPage('onboarding')}>Get Started</button>
-    </header>
+        </header>
   );
 };
 

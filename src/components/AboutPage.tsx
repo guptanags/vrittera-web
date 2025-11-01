@@ -4,6 +4,7 @@ import targetIcon from '../images/target.png';
 import gradIcon from '../images/education.png';
 import brainIcon from '../images/brain.png';
 import handshakeIcon from '../images/handshake.png';
+import briefcaseIcon from '../images/suitcase.png';
 
 
 const AboutPage: React.FC = () => {
@@ -12,8 +13,7 @@ const AboutPage: React.FC = () => {
       <div className="container">
         <h1>Orbiting Careers with AI</h1>
         <p className="intro">
-          <strong>Vrittera AI</strong> is not just a tool — it's your <em>career co-pilot</em> designed to turn fresh graduates into job-ready professionals in weeks, not years.
-        </p>
+        <strong>Vrittera AI</strong> is your <em>intelligent career co-pilot</em> — whether you're a fresh graduate stepping into the job market or a seasoned professional aiming for the next leap.        </p>
 
         <div className="vision-mission">
           {/* Vision */}
@@ -23,8 +23,7 @@ const AboutPage: React.FC = () => {
             
             <h3>Our Vision</h3>
             <p>
-              To place <strong>1 million Indian graduates</strong> in their dream roles by 2030 — using AI to bridge the gap between campus and corporate.
-            </p>
+                To empower <strong>1 million Indian professionals</strong> — from campus to C-suite — with AI-driven tools that accelerate career success.            </p>
           </div>
 
           {/* Mission */}
@@ -32,18 +31,33 @@ const AboutPage: React.FC = () => {
             <img src={targetIcon} alt="Mission" className="icon" />
             <h3>Our Mission</h3>
             <p>
-              Deliver <strong>instant, personalized career guidance</strong> — from resume to offer letter — using real-time AI that learns from 100,000+ job postings monthly.
-            </p>
+                Deliver <strong>real-time, personalized career intelligence</strong> using AI trained on 100,000+ live job postings — making every transition faster and smarter.            </p>
           </div>
         </div>
 
         <div className="grad-spotlight">
-          <h2>Built for New Graduates</h2>
-          <div className="grad-grid">
+            <h2>Built for Every Career Stage</h2> 
+            <div className="grad-grid">
             <div className="grad-item">
               <img src={gradIcon} alt="Grad" className="icon" />
-              <h4>No Experience? No Problem.</h4>
-              <p>AI turns your projects, internships, and coursework into ATS-optimized bullet points.</p>
+              <h4>Fresh Graduates</h4>
+             <p className="tagline">From Campus to Offer Letter</p>
+              <ul className="benefits">
+                <li>Turn projects & internships into ATS-winning bullets</li>
+                <li>Close skill gaps with 7-day learning paths</li>
+                <li>Land your first role in <strong>under 30 days</strong></li>
+              </ul>
+            </div>
+            <div className="grad-item pro">
+              <img src={briefcaseIcon} alt="professinals" className="icon" />
+
+              <h4>Experienced Professionals</h4>
+              <p className="tagline">From Good to Great</p>
+              <ul className="benefits">
+                <li>Master high-stakes interviews with AI feedback</li>
+                <li>Identify & fill skill gaps for promotion/switch</li>
+                <li>Negotiate <strong>₹2L+ salary hikes</strong> with data</li>
+              </ul>
             </div>
             <div className="grad-item">
                 <img src={brainIcon} alt="Skills" className="icon" />

@@ -279,8 +279,30 @@ footer a { color: white; text-decoration: none; }
   color: transparent;
   margin-bottom: 12px;
 }
-.grad-item h4 { color: var(--teal); margin: 8px 0; }
 
+.grad-item h4 { color: var(--teal); margin: 8px 0; }
+.tagline {
+  font-weight: 600;
+  color: var(--teal);
+  margin: 12px 0;
+  font-size: 1.1rem;
+}
+.benefits {
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 16px;
+}
+.benefits li {
+  margin: 10px 0;
+  position: relative;
+}
+.benefits li::before {
+  content: "✓";
+  color: var(--teal);
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+}
 /* AI Power List */
 .ai-power { margin: 64px 0; }
 .ai-list {
@@ -314,7 +336,7 @@ footer a { color: white; text-decoration: none; }
 
 /* Responsive */
 @media (min-width: 768px) {
-  .vision-mission, .grad-grid { grid-template-columns: repeat(3, 1fr); }
+  .vision-mission, .grad-grid { grid-template-columns: repeat(2, 1fr); }
   .ai-list { grid-template-columns: repeat(4, 1fr); }
 }
 /* === PRICING PAGE === */
